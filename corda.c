@@ -17,30 +17,35 @@ int concatenaString(int qtdstrings, char **str1, ...) {
 		for (int i = 1; c != '\0'; i++) {
 			adicionaPilha(&s, c);
 			c = str[i];
-			//printf("%c", c);
 		}
 	}
 
 	va_end(ap);
 
 	*str1 = retornaString(&s);
-	//printf("\n%s\n", s.string);
-	//printf("\n%s\n", str1);
 
 	destroiPilha(&s);
 
 	return s.tam;
 }
 
-int copiaString(char **str1, char *str2, int num) {
+int copiaString(char **str1, char *str2, int ini, int fim) {
 
 	string s;
 	char c = 'a';
 
 	s = criaPilha();
-	for (int i = num; c != '\0'; i++) {
-		c = str2[i];
-		adicionaPilha(&s, c);
+	if (fim == 0) {
+		for (int i = ini; c != '\0'; i++) {
+			c = str2[i];
+			adicionaPilha(&s, c);
+		}
+	}
+	else {
+		for (int i = ini; i <= fim && c != '\0'; i++) {
+			c = str2[i];
+			adicionaPilha(&s, c);
+		}
 	}
 
 	*str1 = retornaString(&s);
