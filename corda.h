@@ -1,6 +1,13 @@
 #ifndef IMPUT_H
 #define IMPUT_H
 
+/*	Desaloca strings
+- Deve ser passado como primeiro argumento um inteiro indicando quantas strings (criadas usando essa API) devem ser desalocadas, os próximos argumentos devem ser o endereço das strings
+Ex:	leString(&str1);
+	leString(&str2);
+	liberaString(&str1, &str2);		//os ponteiros passam a apontar para NULL*/
+void liberaString(int qtdStrings, ...);
+
 /*	Concatena strings
 - Deve ser passado como primeiro argumento um inteiro indicando quantas strings vão ser concatenadas, como segundo argumento o endereço do ponteiro char onde deve ser armazenado a string final já concatenada (o conteudo inicial dela não fará parte da string final, de preferência usar um ponteiro ainda não utilizado), os próximos argumentos devem ser as strings que serão concatenadas
 - Retorna um inteiro com o tamanho da string final (contando também o \0)
@@ -8,7 +15,7 @@ Ex:	int tamString;
 	char *stringFinal, inicio[] = "essa string ", fim[] = "strings concatenadas";
 	tamString = concatenaString(3, &stringFinal, inicio, "são várias ", fim);		//stringFinal = "essa string são várias strings concatenadas"
 */
-int concatenaString(int qtdstrings, char **str1, ...);
+int concatenaString(int qtdStrings, char **str1, ...);
 
 
 /*	Copia uma string

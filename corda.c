@@ -3,7 +3,21 @@
 #include <stdarg.h>
 #include "corda.h"
 
-int concatenaString(int qtdstrings, char **str1, ...) {
+void liberaString(int qtdStrings, ...) {
+
+	va_list apt;
+	va_start(ap, qtdStrings);
+
+	for (int i = 0; i < qtd; i++) {
+		char **str = va_arg(ap, char**);
+		free(*str);
+		*str = NULL;
+	}
+
+	va_end(ap);
+}
+
+int concatenaString(int qtdStrings, char **str1, ...) {
 
 	string s;
 	s = criaPilha();
@@ -11,7 +25,7 @@ int concatenaString(int qtdstrings, char **str1, ...) {
 	va_list ap;
 	va_start(ap, str1);
 
-	for (int i = 0; i < qtdstrings; i++) {
+	for (int i = 0; i < qtdStrings; i++) {
 		char *str = va_arg(ap, char*);
 		char c = str[0];
 		for (int i = 1; c != '\0'; i++) {
