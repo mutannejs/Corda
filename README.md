@@ -8,8 +8,10 @@ Deve ser passado como argumento o endereço de um ponteiro char que deverá apon
 
 Retorna um inteiro com o tamanho da string (contando também o \0)
 
-Ex:	`int tamString;
+Exemplo de uso:
 
-	char *string;
+`int tamString;
 
-	tamString = leString(&string);`
+char *string;
+
+tamString = leString(&string);`
