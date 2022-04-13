@@ -10,8 +10,8 @@ Retorna um inteiro com o tamanho da string (contando também o \0)
 
 Exemplo de uso:
 
-`int tamString;
+`int tamString;`
 
-char *string;
+`char *string;`
 
-tamString = leString(&string);`
+`tamString = leString(&string);`
