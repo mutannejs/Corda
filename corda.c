@@ -5,10 +5,10 @@
 
 void liberaString(int qtdStrings, ...) {
 
-	va_list apt;
+	va_list ap;
 	va_start(ap, qtdStrings);
 
-	for (int i = 0; i < qtd; i++) {
+	for (int i = 0; i < qtdStrings; i++) {
 		char **str = va_arg(ap, char**);
 		free(*str);
 		*str = NULL;
