@@ -62,4 +62,4 @@ Exemplo:
 
 `leString(&str2);`
 
-`liberaString(&str1, &str2);`
+`liberaString(2, &str1, &str2);`
