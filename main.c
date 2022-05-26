@@ -12,7 +12,7 @@ int main() {
 	printf("Teste de limpaBuffer() - escreva algo com menos que 10 letras:\n");
 	scanf("%s", testeLB);
 	limpaBuffer();
-	
+
 	printf("\nTeste de leString() - escreva alguma coisa:\n");
 	tamString = leString(&string);
 	printf("tam:%d string:%s\n", tamString, string);
