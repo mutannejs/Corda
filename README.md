@@ -25,7 +25,7 @@ Não é necessário usar entre duas chamadas de leString();
 
 Exemplo:
 
-`scanf("%s", &s);`
+`scanf("%s", stringScanf);`
 
 `limpaBuffer();`
 
