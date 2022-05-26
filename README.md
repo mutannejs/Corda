@@ -23,7 +23,13 @@ Essa função limpa o buffer do teclado, deve ser usada antes de chamar leString
 
 Não é necessário usar entre duas chamadas de leString();
 
-Um exemplo de uso é após a função scanf();
+Exemplo:
+
+`scanf("%s", &s);`
+
+`limpaBuffer();`
+
+`leString(&string);`
 
 ### int copiaString(char **str1, char *str2, int ini, int fim)
 Essa função copia parte de uma string
