@@ -50,7 +50,6 @@ Exemplo:
 
 `//o conteúdo da stringFinal é "essa string são várias strings concatenadas"`
 
-
 ### void liberaString(int qtdStrings, ...)
 Essa função desaloca as strings criadas a partir desta API. Deve ser usada sempre que a string não for mais utilizada pelo programa, ou caso a mesma variável seja usada para gurdar outra string
 
@@ -63,3 +62,6 @@ Exemplo:
 `leString(&str2);`
 
 `liberaString(2, &str1, &str2);`
+
+## Alternativa
+Para usar strings sem conhecer o quão grande ela é (por exemplo quando se deseja guardar em uma string o conteúdo de um texto), pode-se usar o biblioteca buffer.h
