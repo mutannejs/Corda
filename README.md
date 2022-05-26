@@ -1,5 +1,7 @@
 # Corda
-API em C para manipular strings sem conhecimento prévio do tamanho máximo delas
+API em C para manipular strings sem conhecimento prévio do tamanho máximo delas. Esta API pode sofrer mudanças diversas.
+**Alternativa:**
+Para uso semelhante, pode-se usar a biblioteca buffer.h
 
 ### int leString(char **pont)
 Essa função lê uma string da entrada padrão
@@ -62,6 +64,3 @@ Exemplo:
 `leString(&str2);`
 
 `liberaString(2, &str1, &str2);`
-
-## Alternativa
-Para usar strings sem conhecer o quão grande ela é (por exemplo quando se deseja guardar em uma string o conteúdo de um texto), pode-se usar o biblioteca buffer.h
