@@ -19,9 +19,9 @@ Exemplo:
 `tamString = leString(&string);`
 
 ### void limpaBuffer()
-Essa função limpa o buffer do teclado, deve ser usada antes de chamar leString() se anteriormente foi usada alguma função para leitura do teclado, e esta por sua vez deixe o \n no buffer.
+Essa função limpa o buffer do teclado, deve ser usada antes de chamar leString() se anteriormente foi usada alguma função para leitura do teclado, e esta por sua vez deixe o \n no buffer
 
-Não é necessário usar entre duas chamadas de leString();
+Não é necessário usar entre duas chamadas de leString()
 
 Exemplo:
 
