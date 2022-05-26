@@ -18,6 +18,13 @@ Exemplo:
 
 `tamString = leString(&string);`
 
+### void limpaBuffer()
+Essa função limpa o buffer do teclado, deve ser usada antes de chamar leString() se anteriormente foi usada alguma função para leitura do teclado, e esta por sua vez deixe o \n no buffer.
+
+Não é necessário usar entre duas chamadas de leString();
+
+Um exemplo de uso é após a função scanf();
+
 ### int copiaString(char **str1, char *str2, int ini, int fim)
 Essa função copia parte de uma string
 

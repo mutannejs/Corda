@@ -37,6 +37,10 @@ Ex:	int tamString;
 */
 int leString(char **pont);
 
+/*	Limpa o buffer do teclado
+Essa função ou qualquer outra forma de limpar o buffer do teclado deve ser usada antes de chamar leString, isso se alguma outra função de leitura do teclado (que deixe o \n no buffer do teclado) ser usada antes
+*/
+void limpaBuffer();
 
 // --- Estruturas e funções internas da API ---
 typedef struct string {

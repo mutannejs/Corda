@@ -33,6 +33,7 @@ int concatenaString(int qtdStrings, char **str1, ...) {
 			c = str[i];
 		}
 	}
+	adicionaPilha(&s, '\0');
 
 	va_end(ap);
 
@@ -60,6 +61,8 @@ int copiaString(char **str1, char *str2, int ini, int fim) {
 			c = str2[i];
 			adicionaPilha(&s, c);
 		}
+		if (c != '\0')
+			adicionaPilha(&s, '\0');
 	}
 
 	*str1 = retornaString(&s);
@@ -75,10 +78,10 @@ int leString(char **pont) {
 	char c;
 
 	s = criaPilha();
-	scanf(" %c", &c);
+	c = getchar();
 	while (c != '\n') {
 		adicionaPilha(&s, c);
-		scanf("%c", &c);
+		c = getchar();
 	}
 	adicionaPilha(&s, '\0');
 
@@ -97,6 +100,17 @@ char* retornaString(string *s) {
 	return c;
 }
 
+void limpaBuffer() {
+	char c;
+	c = getchar();
+	while (c != '\n' && c != EOF) {
+		c = getchar();
+	}
+}
+
+
+
+/* Funções da Pilha */
 string criaPilha() {
 	string s;
 	char *c = (char*) malloc(sizeof(char)*10);
