@@ -3,6 +3,16 @@
 #include <stdarg.h>
 #include "corda.h"
 
+int tamanhoString(char string[]) {
+
+	int tam = 0;
+
+	while (string[tam] != '\0')
+		tam++;
+
+	return tam+1;
+}
+
 void liberaString(int qtdStrings, ...) {
 
 	va_list ap;

@@ -1,6 +1,14 @@
 #ifndef IMPUT_H
 #define IMPUT_H
 
+/*	Retorna o tamanho de uma string
+- Deve ser passado como argumento uma string
+- Retorna um inteiro com o tamanho da string (contando também o \0)
+Ex:	int tam;
+	tam = tamanhoString("quantasLetras?");	//tam será igual a 15
+*/
+int tamanhoString(char string[]);
+
 /*	Desaloca strings
 - Deve ser passado como primeiro argumento um inteiro indicando quantas strings (criadas usando essa API) devem ser desalocadas, os próximos argumentos devem ser o endereço das strings
 Ex:	leString(&str1);

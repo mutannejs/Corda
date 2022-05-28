@@ -13,9 +13,17 @@ int main() {
 	scanf("%s", testeLB);
 	limpaBuffer();
 
+	printf("Teste de tamanhoString():\n");
+	tamString = tamanhoString(testeLB);
+	printf("tamString: %d\n", tamString);
+
 	printf("\nTeste de leString() - escreva alguma coisa:\n");
 	tamString = leString(&string);
 	printf("tam:%d string:%s\n", tamString, string);
+
+	printf("Teste de tamanhoString():\n");
+	tamString = tamanhoString(string);
+	printf("tamString: %d\n", tamString);
 	
 	printf("\nTeste de copiaString() - meio:\n");
 	tamString = copiaString(&copia, text, 10, 13);
