@@ -32,7 +32,7 @@ Essa função retorna o tamanho de uma string.
 
 Deve ser passado como argumento a string que deseja saber o tamanho. Pode ser passada qualquer string, não necessariamente uma string obtida usando as funções dessa API.
 
-Retorna um inteiro com o tamanho da string (contando também o \n).
+Retorna um inteiro com o tamanho da string (contando também o \0).
 
 Exemplo:
 
