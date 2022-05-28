@@ -27,6 +27,19 @@ Exemplo:
 
 `leString(&string);`
 
+### int tamanhoString(char string[])
+Essa função retorna o tamanho de uma string.
+
+Deve ser passado como argumento a string que deseja saber o tamanho. Pode ser passada qualquer string, não necessariamente uma string obtida usando as funções dessa API.
+
+Retorna um inteiro com o tamanho da string (contando também o \n).
+
+Exemplo:
+
+`int tam = tamanhoString("quantasLetras?");`
+
+`//tam será igual a 15`
+
 ### int copiaString(char **str1, char *str2, int ini, int fim)
 Essa função copia parte de uma string.
 
